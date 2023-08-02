@@ -1,0 +1,68 @@
+/*progressbanner*/
+#progressbanner {
+    margin: 30px;
+    overflow: hidden;
+    counter-reset: step;
+    padding: 0;
+  }
+  
+  #progressbanner li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 9px;
+    width: 25%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+  }
+  
+  #progressbanner li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    border: 1px solid #e9edf5;
+    margin: 0 auto 10px auto;
+    position: relative;
+      z-index: 10;
+  }
+  
+  /*progressbanner connectors*/
+  #progressbanner li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #e9edf5;
+    position: absolute;
+    left: -50%;
+    top: 20px;
+    z-index: 0; /*put it behind the numbers*/
+  }
+  
+  /* #progressbanner li.active:after {
+    background: red;
+  } */
+  
+  #progressbanner li:first-child:after {
+    content: none;
+  }
+  
+  #progressbanner li:before, #progressbanner li:after {
+    color: black;
+    
+    opacity: 1;
+  }
+
+  #progressbanner li.active:before, #progressbanner li.active:after {
+    background: var(--dribble-primary-bg);
+    color: white;
+    opacity: 1;
+  }

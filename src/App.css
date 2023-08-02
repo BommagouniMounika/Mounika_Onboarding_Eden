@@ -1,0 +1,18 @@
+@font-face {
+  font-family: myIntelFont;
+  src: url(fonts/inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+:root {
+  --dribble-primary-bg: #664de5;
+}
+* {
+  font-family: "Inter", "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif, "Inter variant0", Tofu;
+ }
+body {
+  background-color: #e9edf4;
+}
+
+.App {
+  position: relative;
+  height: 100vh;
+}
